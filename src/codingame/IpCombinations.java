@@ -1,3 +1,4 @@
+package codingame;
 /*
  * print all the possible combination of ip address in a string
  */

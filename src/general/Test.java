@@ -1,3 +1,4 @@
+package general;
 import java.text.MessageFormat;
 import java.util.Arrays;
 import java.util.Date;
@@ -17,10 +18,6 @@ import java.util.stream.IntStream;
 public class Test {
 
 	public static void main(String[] args) {
-
-		
-		//		
-//		Test test = new Test();
 		LinkedList<String> testList = new LinkedList<>();
 		testList.add("Msg 1");
 		testList.add("Msg 2");
@@ -32,40 +29,6 @@ public class Test {
 		String ts = testList.stream().map(w -> w.toString()).collect(Collectors.joining(","));
 		System.out.println(ts);
 			
-
-//		
-//		printLog("Testando mensagem","abcd1234",new RuntimeException("TesteException"));
-//
-//		List<Object[]> resultNotaDebito = new ArrayList<>();
-//		resultNotaDebito.add(new Object[]{3});
-//		Long qtdeNotaPending = Long.valueOf((Integer)(resultNotaDebito.get(0)[0]));
-//		if (qtdeNotaPending == 0l)
-//			return;
-
-		//		testCast();
-
-//		Test.printMap();
-//		List<Integer> songs = new ArrayList<>();
-//		for (int x=0; x < 100000;x++)
-//				songs.add(x);
-//		System.out.println(Calendar.getInstance().getTime());
-//		System.out.println(test.getSongPairCount(songs));
-//		System.out.println(Calendar.getInstance().getTime());
-//		test.fizzBuzz(15);
-//        System.out.println(10 * 20 + "Javatpoint"); 
-//        System.out.println("Javatpoint" + 10 * 20);
-//        System.out.println(20 << 20);
-//        Integer[][] intervals ={{1,3},{5,8},{4,10},{20,25}};
-//        test.overlap(intervals);
-//        System.out.println("Rooms: " + test.rooms(lectures));
-//        Integer[][] lectures ={{30,75},{0,50},{60,150},{65,180},{0,50}}; 
-//        System.out.println("Rooms: " + test.rooms(lectures));
-//        int [] fromIds  ={4,6,9,1};
-//        int [] toIds  ={9,1,5,4};
-//        System.out.println("Last id: " + test.findNetworkNode(5,fromIds, toIds));
-	}
-	private static void printLog(String msg, String protocolo, Exception ex) {
-		System.out.println(MessageFormat.format("{0} - {1} - {2}",protocolo, msg, ex));
 	}
 
 	public static void testCast() {
@@ -117,13 +80,6 @@ public class Test {
 	public Integer overlap(Integer [][] intervals) {
 		int rooms = 0;
 		Arrays.sort(intervals,(a,b) -> Integer.compare(a[0],b[0]));
-//	 	IntStream.range(0, intervals.length).forEach(x -> System.out.println(intervals[x][0] + " " + intervals[x][1]));
-//		System.out.println("intervals: " + intervals.toString());
-//		for (int cur = 0; cur < lectures.length-1);cur++) {
-//			if (lectures[cur][1] > lectures[cur+1][0])
-//				rooms++;
-//			System.out.println("Start: " + lectures[cur][0] + " End: " + lectures[cur][1]);
-//		}
 		
 		return rooms;
 }
@@ -156,57 +112,6 @@ public class Test {
 			}
 			return last;
 	}
-	
-//	public List<String> flightRoute(List<String[]> routes, String origin) {
-//		Map<String,String> flights = new HashMap<String,String>();
-//		
-//		routes.stream().forEach((R) -> System.out.println("K:" + R[0] + " V:" + R[1]));
-//		routes.stream().forEach(flt -> flights.put(flt[0], flt[1]));
-//		
-//		flights.entrySet().stream().forEach((E) -> System.out.printf("K:%s V:%s",E.getKey(),E.getValue()));
-//		
-//		return new ArrayList<>();
-//		
-//	}
-		
-		
-		
-		//			GeneralTest test = new GeneralTest();
-			
-//			List<Integer> largeList = new ArrayList<>();
-//			IntStream.rangeClosed(1, 100000).forEach(v -> largeList.add(v));
-			
-//			System.out.println(test.checkValue(Arrays.asList(10,15,3,7,20),21));
-//			System.out.println("Start: " + LocalTime.now());
-//			System.out.println(test.checkValue(largeList,200000));
-//			System.out.println("End: " + LocalTime.now());
-
-//	}
-	
-//	public boolean  checkValue(List<Integer> values, Integer k) {
-//		  Boolean result = false;
-//		  Set<Integer> list = new HashSet<Integer>();
-//		  AtomicInteger iteractions = new AtomicInteger(0);
-//		  values.stream().forEach(v -> list.add(v)); 
-//  		 System.out.println("Start Approach 1: " + LocalTime.now());
-//		  result = values.stream().anyMatch(val -> {
-//			  iteractions.incrementAndGet();
-//			  return list.contains(k - val);
-//			  });
-//		  System.out.println("Interactions: " + iteractions.get());
-//  		 System.out.println("Start Approach 2: " + LocalTime.now());
-//  		iteractions.set(0);
-//	  		 for (Integer val : values) {
-//			  iteractions.incrementAndGet();
-//			  if (list.contains(k - val)) {
-//			      result = true;
-//			  	  break;
-//			  	}
-//		  }
-//		  System.out.println("Interactions: " + iteractions.get());
-//   		 System.out.println("End checkValue: " + LocalTime.now());
-//		  return result;
-//	  }
 	public static int loopSum(int [] lista, int start, int value) {
 		return (start >= lista.length ? value : (loopSum(lista, start + 1,value + lista[start])));
 	}

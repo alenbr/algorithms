@@ -1,4 +1,5 @@
-
+package codingame;
+import codingame.DynamicArray;
 
 public class Snippet {
 		public static void main(String[] args) {
@@ -6,8 +7,7 @@ public class Snippet {
 			DynamicArray test = new DynamicArray();
 			
 	        Integer[] denominations ={3,2,1}; 
-	//		Arrays.sort(denominations);
-	        Integer amount = 7;
+			Integer amount = 7;
 	        System.out.println("Ways: " + test.ways(denominations,amount));
 	        //1111111
 	        //111112

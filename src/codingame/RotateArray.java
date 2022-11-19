@@ -1,3 +1,4 @@
+package codingame;
 import java.util.Arrays;
 
 public class RotateArray {

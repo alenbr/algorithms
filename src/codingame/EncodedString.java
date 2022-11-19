@@ -1,3 +1,4 @@
+package codingame;
 import java.util.Stack;
 
 public class EncodedString {
