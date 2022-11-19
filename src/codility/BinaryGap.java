@@ -1,11 +1,10 @@
 package codility;
-import java.util.stream.IntStream;
 
 public class BinaryGap {
 
 	public static void main(String[] args) {
 
-		binaryGap(2147483647);
+		binaryGap(561892);
 	}
 
 	public static void binaryGap(int N) {
@@ -22,10 +21,8 @@ public class BinaryGap {
 					endGap = true;
 					if (currentGap > maxGap) {
 				    	maxGap = currentGap;
-						currentGap = 0;
 						}
-					else 
-						currentGap = 0;
+					currentGap = 0;
 				}
 			} else if (startGap)
 					currentGap++;
